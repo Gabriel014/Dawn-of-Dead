@@ -28,7 +28,7 @@ public class GhostGenerator : MonoBehaviour {
 		zRandomizer = Random.Range (-2, 2);
 		zPositioner = (player.transform.position.z + (zRandomizer * playerMovement));
 		xPositioner = (player.transform.position.x - 400f);
-		positioner = new Vector3 (xPositioner, 37.5f, zPositioner);
+		positioner = new Vector3 (xPositioner, transform.position.y, zPositioner);
 		Instantiate (GhostPrefab, positioner, new Quaternion(1, 0, 1, 0));
 
 	}
